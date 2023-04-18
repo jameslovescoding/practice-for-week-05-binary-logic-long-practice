@@ -5,10 +5,23 @@ const addZeros = require('../utils/addZeros');
 //    Read the export file for the explanation of how it works
 
 /******************************************************************************/
+const convertToBase2 = element => {
+  // Your code here
+  if (typeof element === 'string'){
+    let decimal = parseInt(element, 16);
+    return decimal.toString(2);
+  }
+  return element.toString(2);
+};
+
 
 const asciiTo8bit = str => {
   // Your code here
+  let newArray = str.split('');
+  let asciiValues = newArray.map(val => val.charCodeAt());
+  return asciiValues.map(val => addZeros(convertToBase2(val), 8)).join('');
 };
+
 
 /******************************************************************************/
 
