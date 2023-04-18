@@ -4,6 +4,7 @@
 
 const convertToBase16 = element => {
   // Your code here
+  return '0x' + Number(element).toString(16);
 };
 
 /******************************************************************************/
