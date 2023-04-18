@@ -23,6 +23,8 @@ const binaryStringToArray = str => {
 
 const binaryToAscii = str => {
   // Your code here
+  // console.log(binaryStringToArray(str));
+  return binaryStringToArray(str).map(ele => String.fromCharCode('0b' + ele)).join("");
 };
 
 /******************************************************************************/
